@@ -1,0 +1,181 @@
+{include file='index/temp/header'/}
+<div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    {include file='index/temp/menus'/}
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+								<!-- Page-header start -->
+                                    <div class="page-header card">
+                                        <div class="card-block">
+                                            <h5 class="m-b-10">内容管理</h5>
+                                            <p class="text-muted m-b-10">lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                            <ul class="breadcrumb-title b-t-default p-t-10">
+                                                <li class="breadcrumb-item">
+                                                    <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                                </li>
+                                                <li class="breadcrumb-item"><a href="#!">Basic Components</a></li>
+                                                <li class="breadcrumb-item"><a href="#!">Breadcrumb</a></li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <style>
+                                        .table-responsive-md>.table{
+                                            text-align: center;
+                                        }
+                                        .table-responsive-md>.table th{
+                                            text-align: center;
+                                        }
+                                        .table-responsive-md>.table td{
+                                            line-height: 30px;
+                                            display: table-cell;
+                                        }
+                                        .table-responsive-md>.table .title{
+                                            text-align: left;
+                                        }
+                                        .table-responsive-md>.table input{
+                                            text-align: center;
+                                        }
+                                        .card>.card-block>.group{
+                                            margin-bottom: 20px;
+                                            display: flex;
+                                            align-items: center;
+                                        }
+                                        .card>.card-block>.group .search{
+                                            margin-left: 15px;
+                                        }
+                                        .card>.card-block>.group .input-group input{
+                                            padding: 0;
+                                        }
+                                        
+                                    </style>
+                                    <!-- Page-header end -->
+                                    <!-- Page-body start -->
+                                    <div class="page-body breadcrumb-page">
+                                        <!-- Simple Breadcrumb card start -->
+                                        <div class="card">
+                                            <div class="card-block">
+                                                <div class="group">
+                                                    <button type="button" class="btn btn-outline-primary fa fw fa-plus"> 发布文档</button>
+                                                    <div class="search">
+                                                        <div class="input-group mb-0">
+                                                            <input type="text" class="form-control" placeholder="Recipient's username" aria-label="Recipient's username" aria-describedby="basic-addon2">
+                                                            <div class="input-group-append">
+                                                              <button class="btn btn-outline-secondary" style="padding: 9px;" type="button">Button</button>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                                <div class="table-responsive-md">
+                                                    <table class="table">
+                                                        <thead>
+                                                            <tr>
+                                                              <th width="50"><input type="checkbox"></th>
+                                                              <th width="100">排序</th>
+                                                              <th width="120">ID</th>
+                                                              <th class="title">标题</th>
+                                                              <th width="100">状态</th>
+                                                              <th width="120">点击</th>
+                                                              <th width="180">用户名</th>
+                                                              <th width="150">操作</th>
+                                                            </tr>
+                                                          </thead>
+                                                          <tbody>
+                                                            <tr>
+                                                              <td><input type="checkbox"></td>
+                                                              <td><input type="text" value="1" class="form-control"></td>
+                                                              <td>1</td>
+                                                              <td class="title">网站建设，静态页面和动态页面如何选择 <i class="fa fw fa-file-image-o"></i> </td>
+                                                              <td>
+                                                                {if condition="1"}
+                                                                <span class="text-success">已审核</span>
+                                                                {else/}
+                                                                <span class="text-danger">未审核</span>
+                                                                {/if}
+                                                                </td>
+                                                              <td>15645</td>
+                                                              <td>Admin</td>
+                                                              <td><span>修改</span> | <span>删除</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td><input type="checkbox"></td>
+                                                              <td><input type="text" value="1" class="form-control"></td>
+                                                              <td>1</td>
+                                                              <td class="title">网站建设，静态页面和动态页面如何选择 <i class="fa fw fa-file-image-o"></i> </td>
+                                                              <td>
+                                                                {if condition="1"}
+                                                                <span class="text-success">已审核</span>
+                                                                {else/}
+                                                                <span class="text-danger">未审核</span>
+                                                                {/if}
+                                                                </td>
+                                                              <td>15645</td>
+                                                              <td>Admin</td>
+                                                              <td><span>修改</span> | <span>删除</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td><input type="checkbox"></td>
+                                                              <td><input type="text" value="1" class="form-control"></td>
+                                                              <td>1</td>
+                                                              <td class="title">网站建设，静态页面和动态页面如何选择 <i class="fa fw fa-file-image-o"></i> </td>
+                                                              <td>
+                                                                {if condition="1"}
+                                                                <span class="text-success">已审核</span>
+                                                                {else/}
+                                                                <span class="text-danger">未审核</span>
+                                                                {/if}
+                                                                </td>
+                                                              <td>15645</td>
+                                                              <td>Admin</td>
+                                                              <td><span>修改</span> | <span>删除</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td><input type="checkbox"></td>
+                                                              <td><input type="text" value="1" class="form-control"></td>
+                                                              <td>1</td>
+                                                              <td class="title">网站建设，静态页面和动态页面如何选择 <i class="fa fw fa-file-image-o"></i> </td>
+                                                              <td>
+                                                                {if condition="1"}
+                                                                <span class="text-success">已审核</span>
+                                                                {else/}
+                                                                <span class="text-danger">未审核</span>
+                                                                {/if}
+                                                                </td>
+                                                              <td>15645</td>
+                                                              <td>Admin</td>
+                                                              <td><span>修改</span> | <span>删除</span></td>
+                                                            </tr>
+                                                            <tr>
+                                                              <td><input type="checkbox"></td>
+                                                              <td><input type="text" value="1" class="form-control"></td>
+                                                              <td>1</td>
+                                                              <td class="title">网站建设，静态页面和动态页面如何选择 <i class="fa fw fa-file-image-o"></i> </td>
+                                                              <td>
+                                                                {if condition="1"}
+                                                                <span class="text-success">已审核</span>
+                                                                {else/}
+                                                                <span class="text-danger">未审核</span>
+                                                                {/if}
+                                                                </td>
+                                                              <td>15645</td>
+                                                              <td>Admin</td>
+                                                              <td><span>修改</span> | <span>删除</span></td>
+                                                            </tr>
+                                                          </tbody>
+                                                    </table>
+                                                  </div>
+                                            </div>
+                                        </div>
+                                        <!-- Simple Breadcrumb card start -->
+                                    </div>
+                                    <!-- Page-body start -->
+                                </div>
+                            </div>
+                            <!-- Main-body start -->
+                        </div>
+                    </div>
+                </div>
+</div>
+{include file='index/temp/footer'/}

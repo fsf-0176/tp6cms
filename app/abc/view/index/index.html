@@ -1,0 +1,35 @@
+<style>
+    div {
+        display: flex;
+    }
+
+    div>span {
+        display: inline-block;
+        border: 1px solid #ccc;
+        width: 150px;
+    }
+</style>
+
+<div>
+    <span>编号</span>
+    <span>插件名称</span>
+    <span>插件介绍</span>
+    <span>状态</span>
+    <span>是否安装</span>
+    <span>作者</span>
+    <span>版本</span>
+    <span>操作</span>
+</div>
+{volist name='list' id='vo'}
+<div>
+    <span>{$vo['name']}</span>
+    <span>{$vo['title']}</span>
+    <span>{$vo['description']}</span>
+    <span>{$vo['status']?'已启用':'未启用'}</span>
+    <span>{$vo['install']?'已安装':'未安装'}</span>
+    <span>{$vo['author']}</span>
+    <span>{$vo['version']}</span>
+    <span>{$vo['button']|raw}</span>
+</div>
+{/volist}
+{$abc}

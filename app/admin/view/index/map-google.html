@@ -1,0 +1,100 @@
+{include file='index/temp/header'/}
+    <div class="pcoded-main-container">
+                <div class="pcoded-wrapper">
+                    {include file='index/temp/menus'/}
+                    <div class="pcoded-content">
+                        <div class="pcoded-inner-content">
+                            <!-- Main-body start -->
+                            <div class="main-body">
+                                <div class="page-wrapper">
+									<!-- Page-header start -->
+                                    <div class="page-header card">
+                                        <div class="card-block">
+                                            <h5 class="m-b-10">Google Map</h5>
+                                            <p class="text-muted m-b-10">lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                            <ul class="breadcrumb-title b-t-default p-t-10">
+                                                <li class="breadcrumb-item">
+                                                    <a href="index.html"> <i class="fa fa-home"></i> </a>
+                                                </li>
+                                                    <li class="breadcrumb-item"><a href="#!">Maps</a>
+                                                    </li>
+                                                    <li class="breadcrumb-item"><a href="#!">Google Maps</a>
+                                                    </li>
+                                            </ul>
+                                        </div>
+                                    </div>
+                                    <!-- Page-header end -->
+                                   
+
+                                <!-- Page body start -->
+                                <div class="page-body">
+                                    <div class="row">
+                                        <div class="col-lg-12 col-xl-6">
+                                            <!-- Basic map start -->
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5>Basic</h5>
+                                                    <span>Map shows places around the world</span>
+                                                    <div class="card-header-right">                                                             <i class="icofont icofont-spinner-alt-5"></i>                                                         </div>
+                                                </div>
+                                                <div class="card-block">
+                                                    <div id="gmaps-simple" class="set-map"></div>
+                                                </div>
+                                            </div>
+                                            <!-- Basic map end -->
+                                        </div>
+                                        <div class="col-lg-12 col-xl-6">
+                                            <!-- Markers map start -->
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5>Markers</h5>
+                                                    <span>Maps shows <code>location</code> of the place</span>
+                                                    <div class="card-header-right">                                                             <i class="icofont icofont-spinner-alt-5"></i>                                                         </div>
+                                                </div>
+                                                <div class="card-block">
+                                                    <div id="markermap" class="set-map"></div>
+                                                </div>
+                                            </div>
+                                            <!-- Markers map end -->
+                                        </div>
+                                    </div>
+                                    <div class="row">
+                                        <div class="col-lg-12 col-xl-6">
+                                            <!-- Overlay map start -->
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5>Street View</h5>
+                                                    <span>Map shows view of street</span>
+                                                    <div class="card-header-right">                                                             <i class="icofont icofont-spinner-alt-5"></i>                                                         </div>
+                                                </div>
+                                                <div class="card-block">
+                                                    <div id="overlayermap" class="set-map"></div>
+                                                </div>
+                                            </div>
+                                            <!-- Overlay map start -->
+                                        </div>
+                                        <div class="col-lg-12 col-xl-6">
+                                            <!-- Street View map start -->
+                                            <div class="card">
+                                                <div class="card-header">
+                                                    <h5>Polygon</h5>
+                                                    <span>Map shows Polygon Area</span>
+                                                    <div class="card-header-right">                                                             <i class="icofont icofont-spinner-alt-5"></i>                                                         </div>
+                                                </div>
+                                                <div class="card-block">
+                                                    <div id="polymap" class="set-map"></div>
+                                                </div>
+                                            </div>
+                                            <!-- Street View map end -->
+                                        </div>
+                                 </div>
+                            </div>
+                            <!-- Page body end -->
+                        </div>
+                    </div>
+                    <!-- Main-body end -->
+                </div>
+            </div>
+        </div>
+    </div>
+{include file='index/temp/footer'/}

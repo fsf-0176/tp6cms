@@ -1,0 +1,272 @@
+{include file='index/temp/header'/}
+<div class="pcoded-main-container">
+    <div class="pcoded-wrapper">
+        {include file='index/temp/menus'/}
+        <div class="pcoded-content">
+            <div class="pcoded-inner-content">
+                <!-- Main-body start -->
+                <div class="main-body">
+                    <div class="page-wrapper">
+	                    <!-- Page-header start -->
+                        <div class="page-header card">
+                            <div class="card-block">
+                                <h5 class="m-b-10">栏目管理</h5>
+                                <p class="text-muted m-b-10">lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+                                <ul class="breadcrumb-title b-t-default p-t-10">
+                                    <li class="breadcrumb-item">
+                                        <a href="/admin/index"> <i class="fa fa-home"></i> </a>
+                                    </li>
+                                    <li class="breadcrumb-item"><a href="#!">Basic Components</a></li>
+                                    <li class="breadcrumb-item"><a href="#!">Breadcrumb</a></li>
+                                </ul>
+                            </div>
+                        </div>
+                        <!-- Page-header end -->
+                        <!-- Page-body start -->
+                        <div class="page-body breadcrumb-page">
+                            <div class="card">
+                                <div class="card-block">
+                                    <!-- <h5>Simple Breadcrumb</h5> -->
+                                    <button type="button" class="btn btn-outline-primary">
+                                        <i class="fa fw fa-plus-square-o"></i>
+                                        栏目增加
+                                    </button>
+                                    <button type="button" class="btn btn-outline-info">
+                                        <i class="fa fw fa-th-large"></i>
+                                        批量增加
+                                    </button>
+                                </div>
+                                <style>
+                                    .tabHead>.row,.tabBody>.row{
+                                        display: flex;
+                                        justify-content: space-between;
+                                        flex-wrap: wrap;
+                                    }
+                                    .tabHead>.row,.tabBody>.row>.child{
+                                        width: 100%;
+                                        display: flex;
+                                        padding: 0;
+                                    }
+                                    .tabBody>.row>.child{
+                                        border-top: 1px dashed #ccc;
+                                    }
+                                    
+                                    .tabHead>.row>div,.tabBody>.row>div{                                        
+                                        padding: 15px;
+                                        text-align: center;
+                                   
+                                    }
+                                    .tabBody>.row>div{                                        
+                                        border-top: 1px solid #ccc;
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                    .tabHead>.row>div{
+                                        background: #eff6ff;
+                                    }
+                                    .tabBody>.row>.child>div{
+                                        padding: 15px;
+                                        box-sizing: border-box;
+                                    }
+                                    .tabHead>.row>div:nth-child(1),.tabBody>.row>div:nth-child(1),.tabBody>.row>.child>div:nth-child(1){
+                                        width: 150px;
+                                    }
+                                    .tabHead>.row>div:nth-child(2),.tabBody>.row>div:nth-child(2),.tabBody>.row>.child>div:nth-child(2){
+                                        width: 120px;
+                                    }
+                                    .tabHead>.row>div:nth-child(3),.tabBody>.row>div:nth-child(3),.tabBody>.row>.child>div:nth-child(3){
+                                        flex: 1;
+                                        text-align: left;
+                                        justify-content:flex-start;
+                                    }
+                                    .tabHead>.row>div:nth-child(4),.tabBody>.row>div:nth-child(4),.tabBody>.row>.child>div:nth-child(4){
+                                        width: 150px;
+                                    }
+                                    .tabHead>.row>div:nth-child(5),.tabBody>.row>div:nth-child(5),.tabBody>.row>.child>div:nth-child(5){
+                                        width: 80px;
+                                    }
+                                    .tabHead>.row>div:nth-child(6),.tabBody>.row>div:nth-child(6),.tabBody>.row>.child>div:nth-child(6){
+                                        width: 330px;
+                                    }
+                                    .tabBody>.row>div:nth-child(6) span{
+                                        display: inline-block;
+                                        padding: 8px;
+                                        cursor: pointer;
+                                    }
+                                    .tabBody>.row>.child>div:nth-child(6){
+                                        display: flex;
+                                        align-items: center;
+                                        justify-content: center;
+                                    }
+                                    .tabBody>.row>.child>div:nth-child(6) span{
+                                        padding: 8px;
+                                    }
+                                    .tabBody>.row>.child .dir::before{
+                                        content: '├─ ';
+                                        transform: scale(1.5,4.4);
+                                        margin-right: 15px;
+                                        display: inline-block;
+                                        color: #ccc;
+                                    }
+                                    .tabBody>.row>.child:last-child>.dir::before{
+                                        display: inline-block;
+                                        transform: scale(1.5,4.4);
+                                        margin-right: 15px;
+                                        content: '└─ ';
+                                        color: #ccc;
+                                    }
+                                    .tabHead>.row,.tabBody>.row{
+                                        margin: 0;
+                                    }
+                                    .tabHead>.row,.tabBody>.row input{
+                                        text-align: center;
+                                    }
+                                </style>
+                                <div class="card-block">
+                                    <div class="tabHead">
+                                        <div class="row">
+                                            <div>ID</div>
+                                            <div>排序</div>
+                                            <div>栏目名称</div>
+                                            <div>所属模型</div>
+                                            <div>显示</div>
+                                            <div>操作</div>
+                                        </div>
+                                    </div>
+                                    <div class="tabBody">
+                                        <div class="row">
+                                            <div>1</div>
+                                            <div><input class="form-control" value="1" type="text"></div>
+                                            <div>关于我们</div>
+                                            <div>单页模型</div>
+                                            <div>
+                                                {if condition="1"}
+                                                    <span class="text-success fa fw fa-check">是</span> 
+                                                {else /}
+                                                    <span class="text-secondary fa fw fa-close">否</span> 
+                                                {/if}
+                                            </div>
+                                            <div>
+                                                <span>内容</span> |
+                                                <span>编辑</span> |
+                                                <span>新增子栏目</span> |
+                                                <span>删除</span> |
+                                                <span>浏览</span>
+                                            </div>
+                                            <div class="child">
+                                                <div>1</div>
+                                                <div><input class="form-control" value="1" type="text"></div>
+                                                <div class="dir">关于我们</div>
+                                                <div>单页模型</div>
+                                                <div>
+                                                    {if condition="1"}
+                                                        <span class="text-success fa fw fa-check">是</span> 
+                                                    {else /}
+                                                        <span class="text-secondary fa fw fa-close">否</span> 
+                                                    {/if}
+                                                </div>
+                                                <div>
+                                                    <span>内容</span> |
+                                                    <span>编辑</span> |
+                                                    <span>新增子栏目</span> |
+                                                    <span>删除</span> |
+                                                    <span>浏览</span>
+                                                </div>
+                                            </div>
+                                            <div class="child">
+                                                <div>1</div>
+                                                <div><input class="form-control" value="1" type="text"></div>
+                                                <div class="dir">关于我们</div>
+                                                <div>单页模型</div>
+                                                <div>
+                                                    {if condition="1"}
+                                                        <span class="text-success fa fw fa-check">是</span> 
+                                                    {else /}
+                                                        <span class="text-secondary fa fw fa-close">否</span> 
+                                                    {/if}
+                                                </div>
+                                                <div>
+                                                    <span>内容</span> |
+                                                    <span>编辑</span> |
+                                                    <span>新增子栏目</span> |
+                                                    <span>删除</span> |
+                                                    <span>浏览</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="row">
+                                            <div>1</div>
+                                            <div><input class="form-control" value="1" type="text"></div>
+                                            <div>关于我们</div>
+                                            <div>单页模型</div>
+                                            <div>
+                                                {if condition="1"}
+                                                    <span class="text-success fa fw fa-check">是</span> 
+                                                {else /}
+                                                    <span class="text-secondary fa fw fa-close">否</span> 
+                                                {/if}
+                                            </div>
+                                            <div>
+                                                <span>内容</span> |
+                                                <span>编辑</span> |
+                                                <span>新增子栏目</span> |
+                                                <span>删除</span> |
+                                                <span>浏览</span>
+                                            </div>
+                                            <div class="child">
+                                                <div>1</div>
+                                                <div><input class="form-control" value="1" type="text"></div>
+                                                <div class="dir">关于我们</div>
+                                                <div>单页模型</div>
+                                                <div>
+                                                    {if condition="1"}
+                                                        <span class="text-success fa fw fa-check">是</span> 
+                                                    {else /}
+                                                        <span class="text-secondary fa fw fa-close">否</span> 
+                                                    {/if}
+                                                </div>
+                                                <div>
+                                                    <span>内容</span> |
+                                                    <span>编辑</span> |
+                                                    <span>新增子栏目</span> |
+                                                    <span>删除</span> |
+                                                    <span>浏览</span>
+                                                </div>
+                                            </div>
+                                            <div class="child">
+                                                <div>1</div>
+                                                <div><input class="form-control" value="1" type="text"></div>
+                                                <div class="dir">关于我们</div>
+                                                <div>单页模型</div>
+                                                <div>
+                                                    {if condition="1"}
+                                                        <span class="text-success fa fw fa-check">是</span> 
+                                                    {else /}
+                                                        <span class="text-secondary fa fw fa-close">否</span> 
+                                                    {/if}
+                                                </div>
+                                                <div>
+                                                    <span>内容</span> |
+                                                    <span>编辑</span> |
+                                                    <span>新增子栏目</span> |
+                                                    <span>删除</span> |
+                                                    <span>浏览</span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                 
+                                </div>
+                            </div>
+                        </div>
+                        </div>
+                        <!-- Page-body start -->
+                    </div>
+                </div>
+                <!-- Main-body start -->
+            </div>
+        </div>
+    </div>
+</div>
+{include file='index/temp/footer'/}

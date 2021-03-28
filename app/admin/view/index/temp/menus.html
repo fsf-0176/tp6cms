@@ -1,0 +1,160 @@
+<style>
+    .pcoded-navbar {
+        overflow: hidden;
+        float: left;
+        height: calc(100vh - 56px);
+        position: fixed;
+        left: 0;
+        top: 56px;
+        height: 100%;
+        z-index: 100;
+        background: white;
+        transition: 1s;
+    }
+
+    .pcoded-inner-navbar.main-menu>ul {
+        overflow: hidden;
+    }
+    .pcoded-inner-navbar.main-menu>ul>li{
+        overflow: hidden;
+    }
+    .pcoded-inner-navbar.main-menu>ul>li>a {
+        height: 45px;
+        line-height: 45px;
+        display: flex;
+        align-items: center;
+        height: 100%;
+        position: relative;
+        padding-left: 10px;
+        font-size: 16px;
+    }
+    .pcoded-inner-navbar.main-menu>ul>li>a>i{
+        margin-right: 10px;
+    }
+    .pcoded-inner-navbar.main-menu>ul>li>a::after {
+        content: '';
+        display: block;
+        height: 100%;
+        position: absolute;
+        left: 0;
+        top: 0;
+        height: 100%;
+        border-left: 5px solid transparent;
+        top: 0;
+    }
+    .pcoded-inner-navbar.main-menu>ul>li.active{
+        color: #4099ff;
+    }
+    .pcoded-inner-navbar.main-menu>ul>li.active>a::after {
+        border-left: 5px solid #4099ff;
+    }
+
+    .pcoded-inner-navbar.main-menu>ul>li>a:hover::after {
+        border-left: 5px solid #4099ff;
+    }
+
+    .pcoded-inner-navbar.main-menu>ul>li>a>.right {
+        position: absolute;
+        right: 10px;
+        height: 45px;
+        top: 0;
+        line-height: 45px;
+        transition: 1s;
+    }
+
+    .pcoded-inner-navbar.main-menu>ul>li.active>a>.right {
+        transform: rotate(90deg);
+    }
+
+    /*  */
+    .main-menu>ul>li>ol {
+        display: none;
+        width: 100%;
+    }
+
+    .main-menu>ul>li>ol>li {
+        list-style: none;
+        display: flex;
+        align-items: center;
+        color: #222;
+    }
+
+    .main-menu>ul>li>ol>li>a {
+        display: block;
+        height: 40px;
+        width: 100%;
+        line-height: 40px;
+    }
+
+    .main-menu>ul>li>ol>li::before {
+        content: '├';
+        padding-right: 5px;
+        transform: scaleY(2.4);
+    }
+
+    .main-menu>ul>li>ol>li:last-child::before {
+        content: '└';
+    }
+    .contact-menu i, .fa-cog, .services-list i {
+        margin: 0;
+    }
+    @media (max-width: 992px) {
+        .pcoded-navbar {
+            transform: translateX(-100%);
+        }
+
+        .pcoded-content {
+            padding-left: 0px;
+        }
+    }
+</style>
+<nav class="pcoded-navbar">
+    <div class="pcoded-inner-navbar main-menu">
+        <ul>
+            <li>
+                <a href="/admin/index">
+                    <i class="fa fa-bars fw"></i>
+                    后台首页
+                </a>
+            </li>
+            <li>
+                <a href="/admin/category">
+                    <i class="fa fa-bars fw"></i>
+                    栏目管理
+                </a>
+            </li>
+            <li>
+                <a href="#!">
+                    <i class="fa-sticky-note-o fa fw"></i> 内容管理
+                    <i class="fa-angle-right fa right"></i>
+                </a>
+                <ol>
+                    <li>
+                        <a href="/admin/content">文章管理</a>
+                    </li>
+                    <li>
+                        <a href="#">案例管理</a>
+                    </li>
+                    <li>
+                        <a href="#">图片管理</a>
+                    </li>
+                </ol>
+            </li>
+            <li>
+                <a href="/admin/tabs">
+                    <i class="fa-file-sound-o fa fw"></i> 广告管理
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-cog fa fw"></i> 基本信息
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fa-plug fa fw"></i> 插件应用
+                </a>
+            </li>
+        </ul>
+    </div>
+</nav>
